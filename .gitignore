@@ -1,0 +1,6 @@
+/modulesapp/
+/node_modules/
+modulesapp/
+**/modulesapp/node_modules/**
+*.json
+.json
