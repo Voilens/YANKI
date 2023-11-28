@@ -71,7 +71,7 @@ function mytheme_customize_register( $wp_customize ) {
 $wp_customize->add_section(
     // ID
     'data_site_section',
-    // Arguments array
+    // Массив аргументов
     array(
         'title' => 'Контакты',
         'capability' => 'edit_theme_options',
@@ -80,11 +80,12 @@ $wp_customize->add_section(
 );
 /*
 Добавляем поле контактных данных
+ 1. Добавляем поле с почтовым адресом theme_contacttext
 */
 $wp_customize->add_setting(
     // ID
     'theme_contacttext',
-    // Arguments array
+    // Массив аргументов
     array(
         'default' => '',
         'type' => 'option'
@@ -93,22 +94,22 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
     // ID
     'theme_contacttext_control',
-    // Arguments array
+    // Массив аргументов
     array(
         'type' => 'text',
         'label' => "Почтовый адрес:",
         'section' => 'data_site_section',
-        // This last one must match setting ID from above
+        // Этот последний должен соответствовать идентификатору настройки, указанному выше.
         'settings' => 'theme_contacttext'
     )
 );
 /*
-Добавляем поле телефона site_telephone
+ 2. Добавляем поле телефона site_telephone
 */
 $wp_customize->add_setting(
     // ID
     'site_telephone',
-    // Arguments array
+    // Массив аргументов
     array(
         'default' => '',
         'type' => 'option'
